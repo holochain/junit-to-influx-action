@@ -1,0 +1,1 @@
+# junit-to-influx-action
