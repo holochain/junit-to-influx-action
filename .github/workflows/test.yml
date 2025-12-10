@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  pull_request: {}
+
+jobs:
+  test-upload-action:
+    name: test upload-test-results action
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v6
+
+      - name: setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: install dependencies
+        run: |
+          npm ci
+
+      - name: run tests
+        run: |
+          npm test
