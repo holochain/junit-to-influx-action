@@ -1,4 +1,4 @@
-const { parseJUnitXML } = require('./index');
+const { parseJUnitXML } = require('./parser');
 const fs = require('fs').promises;
 const path = require('path');
 
